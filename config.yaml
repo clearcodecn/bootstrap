@@ -10,6 +10,7 @@ footerScript: # 全局的 footer 脚本
 devId: default  # 开发的cid.
 cache: false   # 是否开启静态缓存
 cachePath: ./cache
+debug: true
 
 hosts:
   - id: default   # 站点的 id.

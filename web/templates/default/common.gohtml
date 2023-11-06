@@ -9,8 +9,8 @@
         <title>{{ .host.Title }}</title>
         <meta name="keywords" content="{{ .host.Keywords }}">
         <meta name="keywords" content="{{ .host.Description }}">
-
         {{ .host.HeaderScript | html }}
+        <link rel="stylesheet" href="{{ asset "app.min.css" }}">
     </head>
     <body>
 {{ end }}

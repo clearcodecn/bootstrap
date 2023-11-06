@@ -51,13 +51,15 @@ type ThemeRender struct{}
 
 func (ThemeRender) defaultFuncMaps() template.FuncMap {
 	return template.FuncMap{
-		"html": html,
+		"html":  html,
+		"asset": empty,
 	}
 }
 
 func (ThemeRender) realFuncMaps(ctx *gin.Context) template.FuncMap {
 	return template.FuncMap{
-		"html": html,
+		"html":  html,
+		"asset": asset(ctx),
 	}
 }
 

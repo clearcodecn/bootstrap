@@ -37,6 +37,8 @@ func StartServer(ch chan struct{}) {
 	g.GET("/ads.txt", internal.AdsTxt)
 	g.GET("/sitemap.xml", internal.SiteMapXml)
 
+	g.Static("/static", cfg.StaticPath)
+
 	registerRouter(g)
 
 	fmt.Println("server run at: http://localhost" + cfg.ListenAddress)
