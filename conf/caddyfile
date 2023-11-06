@@ -1,0 +1,4 @@
+www.example.com {
+	request_header cid default  # 必须要设置
+	reverse_proxy :9898
+}

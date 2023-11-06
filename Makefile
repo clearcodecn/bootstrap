@@ -14,3 +14,4 @@ install:
 	@mkdir -p bin/
 	@cp -r web bin/
 	@cp -r conf/config.yaml bin/
+	@cp conf/supervisor.conf /etc/supervisor/conf.d
