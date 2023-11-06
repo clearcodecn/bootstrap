@@ -1,0 +1,31 @@
+dsn: 'root:root@tcp(localhost:3306)/example?charset=utf8mb4&parseTime=True&loc=PRC'
+driver: mysql
+
+listenAddress: ":9898"
+
+templatePath: ./web/templates   # 模板目录
+staticPath: ./web/static
+headerScript: # 这里是全局的header脚本
+footerScript: # 全局的 footer 脚本
+devId: default  # 开发的cid.
+cache: false   # 是否开启静态缓存
+cachePath: ./cache
+
+hosts:
+  - id: default   # 站点的 id.
+    host: http://localhost:9898   # 配置的是访问网站的域名.
+    theme: default
+    adsTxt: '谷歌的/ads.txt文件'
+    title: "网站标题"
+    description: '网站描述信息'
+    keywords: '网站关键词'
+    copyright: '网站版权信息'
+    cdnUrl: '/'  # 静态文件的cdn地址. <可以把静态文件部署在国内的服务器上.>
+    adList: # 自定义的广告列表.
+      - link: https://www.baidu.com
+        image: /example.png
+        direct: false   # true 是直接访问，false是间接访问， true 对友站权重高.
+    headerScript: |   # 这里是放在header的脚本/html代码
+      <div><script>console.log('i am header')</script></div>
+    footerScript: |   # 这里是放在 footer 的脚本 / html 代码 
+      <script>console.log('i am footer')</script>
